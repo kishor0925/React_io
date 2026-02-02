@@ -1,52 +1,57 @@
-import React from "react";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import js from "../assets/js.png";
-import react from "../assets/react.png";
 import Course from "./Course";
+import useFetch from "./useFetch";
 
 function Courselist() {
-  const courses = [
-    {
-      name : "Html 5",
-      img: html,
-      content: "Html 5 course for Beginners ",
-      price : 200,
-    },
-    {
-      name: "CSS 3",
-      img: css,
-      content: "CSS 3 course for Beginners to master",
-      price : 399
-     
-    },
-    {
-      name: "Javascript",
-      img: js,
-      content: "Javascript course for beginners ",
-      price : 499
-      
-    },
-    {
-      name: "React js",
-      img: react,
-      content: "React js course for beginners ",
-      price : 999
-     
-    },
-  ];
 
-  const courseslist = courses.map((course, index) => (
-    <Course
-      key={index}
-      name={course.name}
-      content={course.content}
-      price = {course.price}
-      img={course.img}
-    />
-  ));
+  const [courses, error, setData] = useFetch("http://localhost:3000/courses");
 
-  return <>{courseslist}</>;
+  if (!courses) {
+    return (
+      <>
+        {!error && (
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ minHeight: "60vh" }}
+          >
+            <div className="spinner-border" role="status"></div>
+          </div>
+        )}
+        {error && <p className="text-center text-danger">{error}</p>}
+      </>
+    );
+  }
+
+  function handleDelete(courseindex) {
+    const newCourses = courses.filter((course, index) => index !== courseindex)
+    setData(newCourses)
+  }
+
+
+
+
+
+  return (
+
+    <>
+      <div className="container my-5 mt-2">
+        <h2 className="text-center">Our valuable Courses</h2>
+
+        <div className="row g-4 justify-content-center">
+          {courses.map((course, index) => (
+            <Course
+              key={index}
+              name={course.name}
+              content={course.content}
+              price={course.price}
+              img={course.img}
+              delete={() => handleDelete(index)}
+
+            />
+          ))};
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Courselist;

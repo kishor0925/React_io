@@ -1,0 +1,99 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Html 5",
+      "img": "http://localhost:3000/assets/html.png",
+      "content": "Html 5 course for Beginners",
+      "price": 200
+    },
+    {
+      "id": 2,
+      "name": "CSS 3",
+      "img": "http://localhost:3000/assets/css.png",
+      "content": "CSS 3 course for Beginners to master",
+      "price": 399
+    },
+    {
+      "id": 3,
+      "name": "Javascript",
+      "img": "http://localhost:3000/assets/js.png",
+      "content": "Javascript course for beginners",
+      "price": 499
+    },
+    {
+      "id": 4,
+      "name": "React js",
+      "img": "http://localhost:3000/assets/react.png",
+      "content": "React js course for beginners",
+      "price": 999
+    }
+  ],
+  "testimonials": [
+  {
+    "id": 1,
+    "name": "Arun Kumar",
+    "role": "Frontend Developer",
+    "message": "The courses are very beginner friendly and well structured.",
+    "rating": 5,
+    "img": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1"
+  },
+  {
+    "id": 2,
+    "name": "Divya S",
+    "role": "UI Designer",
+    "message": "I really loved the React course. Concepts were crystal clear.",
+    "rating": 4,
+    "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+  },
+  {
+    "id": 3,
+    "name": "Rahul Mehta",
+    "role": "Student",
+    "message": "Best platform to start a career in web development.",
+    "rating": 5,
+    "img": "https://images.unsplash.com/photo-1527980965255-d3b416303d12"
+  },
+  {
+    "id": 4,
+    "name": "Priya Anand",
+    "role": "Software Engineer",
+    "message": "Well explained with practical examples. Totally worth it!",
+    "rating": 4,
+    "img": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c"
+  },
+  {
+    "id": 5,
+    "name": "Karthik R",
+    "role": "Freelancer",
+    "message": "Helped me gain confidence to take freelance projects.",
+    "rating": 5,
+    "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+  },
+  {
+    "id": 6,
+    "name": "Sneha Patel",
+    "role": "College Student",
+    "message": "Simple explanations and easy to follow lessons.",
+    "rating": 4,
+    "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+  },
+  {
+    "id": 7,
+    "name": "Mohammed Ali",
+    "role": "Backend Developer",
+    "message": "Frontend concepts are explained in a very clean way.",
+    "rating": 5,
+    "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+  },
+  {
+    "id": 8,
+    "name": "Anitha Raj",
+    "role": "Career Switcher",
+    "message": "Perfect place for beginners switching to IT field.",
+    "rating": 5,
+    "img": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+  }
+]
+
+}
